@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.ancho{
+    width: 80%;
+}
+
+::ng-deep {
+	.calendar-dialog {
+		mat-dialog-container {
+			padding: 0px;
+		}
+	}
+	.calendar-dialog-backdrop {
+		background: #333333db;
+	}
+}
+
+h1 {
+  font-family: 'Inter';
+  text-align: center;
+  letter-spacing: 3px;
+  border-bottom: 1px solid rgb(152, 5, 144);
+  margin: 15px;
+  padding: 20px;
+}

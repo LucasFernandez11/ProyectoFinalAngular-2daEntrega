@@ -1,0 +1,54 @@
+
+.login form{
+  display: flex;
+  margin: 25px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.315);
+
+}
+.ancho{
+    width: 80%;
+}
+.spinner{
+    margin: 0 auto;
+}
+
+
+mat-form-field {
+    width: 90%;
+  }
+
+
+
+.example-spacer {
+  margin: 21.8%;
+}
+
+.example-section {
+  margin: 12px 0;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+
+.tit {
+  letter-spacing: 3px;
+  border-bottom: 1px solid rgb(152, 5, 144);
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+button {
+  margin-bottom: 15px;
+}

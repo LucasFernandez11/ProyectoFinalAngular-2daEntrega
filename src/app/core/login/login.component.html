@@ -1,0 +1,23 @@
+<div class=" body d-flex align-items-center justify-content-center h-100">
+  <mat-spinner *ngIf="loading" diameter="50" class="spinner"></mat-spinner>
+    <div class="login">
+
+        <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
+          <h1 color="primary" class="tit" appTwenty>Sign up </h1>
+            <img src="/assets/img/usuario.png" alt="">
+            <mat-form-field appearance="fill">
+              <mat-label>Usuario:</mat-label>
+              <input matInput type="text" formControlName="usuario">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Password:</mat-label>
+              <input matInput type="password" formControlName="contraseña">
+            </mat-form-field>
+            <br>
+            <button type="submit" mat-raised-button class="ancho" color="primary" [disabled]="form.invalid">Entrar</button>
+        </form>
+    </div>
+</div>
+
+
+

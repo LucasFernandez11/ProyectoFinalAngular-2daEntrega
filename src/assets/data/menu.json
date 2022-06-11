@@ -1,0 +1,18 @@
+[
+    {
+        "nombre":"Inicio",
+        "redirect":"/dashboard"
+    },
+    {
+        "nombre":"Estudiantes",
+        "redirect":"/dashboard/estudiantes"
+    },
+    {
+      "nombre":"Inscripciones",
+      "redirect":"/dashboard/inscripciones"
+  },
+    {
+        "nombre":"Cursos",
+        "redirect":"/dashboard/cursos"
+    }
+]

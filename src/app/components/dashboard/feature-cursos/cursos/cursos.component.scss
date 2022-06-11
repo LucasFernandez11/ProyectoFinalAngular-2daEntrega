@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+table {
+    width: 100%;
+  }
+  th{
+    width: 20%;
+  }
+  .pointer{
+    cursor: pointer;
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  button {
+   display: block;
+   margin-bottom: 10px;
+
+  }
+
+.mat-header-cell  {
+    background-color:  rgba(237, 36, 46, 0.51);
+    color: white;
+  }
+
+.acciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.rol {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 40px;
+}
+
+.al {
+  font-family: 'Inter';
+  text-align: center;
+  letter-spacing: 3px;
+  border-bottom: 1px solid rgb(152, 5, 144);
+  margin: 15px;
+  padding: 20px;
+}
+
+.agre {
+  margin-left: 85%;
+  padding: 10px;
+}

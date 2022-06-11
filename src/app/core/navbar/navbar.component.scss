@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&family=Raleway:wght@100&display=swap');
+.nav {
+ font-family: 'Press Start 2P';
+ background-color: rgba(237, 36, 46, 0.51);
+ color: white;
+ font-size: 20px;
+ height:10%;
+}
+
+.menu {
+  font-size: 18px;
+ margin: 20px;
+
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+button {
+  margin-left: 10%;
+  border: 2px solid white;
+  border-radius: 2px white 2px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+
+
+}
