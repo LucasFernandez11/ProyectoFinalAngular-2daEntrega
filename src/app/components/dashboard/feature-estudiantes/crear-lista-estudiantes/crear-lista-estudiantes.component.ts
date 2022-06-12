@@ -1,9 +1,10 @@
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { Estudiantes } from 'src/app/shared/interfaces/estudiantes';
+import { Estudiantes, EstudiantesLista } from 'src/app/shared/interfaces/estudiantes';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, Inject, OnInit } from '@angular/core';
 import { EstudiantesService } from 'src/app/services/estudiantes.service';
+import { ListaEstudiantesService } from '../services/listaEstudiantes.service';
 
 @Component({
   selector: 'app-crear-lista-estudiantes',
@@ -17,7 +18,7 @@ export class CrearListaEstudiantesComponent implements OnInit {
   value: any = null;
   constructor(
                private fb : FormBuilder,
-               private _estudiantesService: EstudiantesService,
+               private _estudiantesService: ListaEstudiantesService,
                private router: Router,
                private _snackBar: MatSnackBar,
 
@@ -27,7 +28,7 @@ export class CrearListaEstudiantesComponent implements OnInit {
                  this.value = navigation?.extras?.state;
 
     this.form = this.fb.group({
-      estudiante:  ["",  [Validators.required, Validators.maxLength(10), Validators.pattern(/^([Aa-zA-ZáéíóúÁÉÍÓÚÑñ]{2,}\s?){2,4}$/)]],
+      estudiante:  ["",  [Validators.required, Validators.maxLength(10)]],
       edad:  ["",  [Validators.required]],
       correo: ["",  [Validators.required]],
        telefono:  ["", [Validators.required]],
@@ -40,13 +41,13 @@ export class CrearListaEstudiantesComponent implements OnInit {
   }
 
   guardar(){
-    const estudiante: Estudiantes={
+    const estudiante: EstudiantesLista={
       id: this.form.value.id,
       nombre: this.form.value.estudiante,
       apellido: this.form.value.apellido,
-      curso: this.form.value.curso,
-      nota: this.form.value.nota,
-      usuario: this.form.value.usuario,
+      edad: this.form.value.edad,
+      correo: this.form.value.correo,
+      telefono: this.form.value.telefono,
     }
 
     this._estudiantesService.agregarEstudiante(estudiante);

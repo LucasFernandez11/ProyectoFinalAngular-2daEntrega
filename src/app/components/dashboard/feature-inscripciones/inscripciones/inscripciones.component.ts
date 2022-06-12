@@ -64,7 +64,7 @@ export class InscripcionesComponent implements OnInit {
     }
   }
   loadView(){
-    this.cargarEstudiantes();
+    this.cargarInscripciones();
     this.validaRol()
   }
   applyFilter(event: Event) {
@@ -75,16 +75,16 @@ export class InscripcionesComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort
   }
-  cargarEstudiantes(){
-    this.listaInscripciones = this._inscripcionesService.getEstudiantes();
+  cargarInscripciones(){
+    this.listaInscripciones = this._inscripcionesService.getInscripciones();
     this.dataSource = new MatTableDataSource(this.listaInscripciones);
     this.ngAfterViewInit();
   }
 
-  eliminarEstudiante(index: number){
+  eliminarInscripciones(index: number){
     console.log(index);
-    this._inscripcionesService.eliminarEstudiante(index);
-    this.cargarEstudiantes();
+    this._inscripcionesService.eliminarInscripciones(index);
+    this.cargarInscripciones();
     this._snackBar.open('Estudiante eliminado con exito','', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
@@ -93,7 +93,7 @@ export class InscripcionesComponent implements OnInit {
   } 
 
   openDialog2(id_delform:number): void{
-    const estudiante = this._inscripcionesService.getEstudiantes().find(c => c.id === id_delform);
+    const estudiante = this._inscripcionesService.getInscripciones().find(c => c.id === id_delform);
     const dialogRef = this.dialog.open(DetalleInscripcionesComponent, {
       data: estudiante,
       width: '1250px',
@@ -101,11 +101,11 @@ export class InscripcionesComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       console.log(result);
-      this.cargarEstudiantes();
+      this.cargarInscripciones();
     });
   }
 
-  editarEstudiante(id:number){
+  editarInscripcion(id:number){
     this._snackBar.open('Registro de estudiante editado','', {
      horizontalPosition: 'center',
      verticalPosition: 'top',
@@ -124,7 +124,7 @@ export class InscripcionesComponent implements OnInit {
 
 
  openDialog(id_delform:number): void {
-  const estudiante = this._inscripcionesService.getEstudiantes().find(c => c.id === id_delform);
+  const estudiante = this._inscripcionesService.getInscripciones().find(c => c.id === id_delform);
   const dialogRef = this.dialog.open(EditarInscripcionComponent, {
     data: estudiante,
     width: '1250px',
@@ -134,7 +134,7 @@ export class InscripcionesComponent implements OnInit {
   dialogRef.afterClosed().subscribe(result => {
     console.log('The dialog was closed');
     console.log(result);
-    this.cargarEstudiantes();
+    this.cargarInscripciones();
   });
 }
 

@@ -1,6 +1,6 @@
 import { InscripcionesService } from '../services/inscripciones.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import {  Inscripciones } from 'src/app/shared/interfaces/inscripciones';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Component, Inject, OnInit } from '@angular/core';
@@ -51,9 +51,9 @@ export class CrearInscripcionesComponent implements OnInit {
      
     }
 
-    this._inscripcionesService.agregarEstudiante(estudiante);
+    this._inscripcionesService.agregarInscripciones(estudiante);
     this.router.navigate(['/dashboard/inscripciones']);
-    this._snackBar.open('Estudiante agregado exitosamente','', {
+    this._snackBar.open('Inscripcion creada exitosamente','', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
       duration: 1500,

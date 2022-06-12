@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Estudiantes, EstudiantesLista } from 'src/app/shared/interfaces/estudiantes';
+import { EstudiantesLista } from 'src/app/shared/interfaces/estudiantes';
 import { CrearListaEstudiantesComponent } from '../crear-lista-estudiantes/crear-lista-estudiantes.component';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -30,9 +30,8 @@ export class DetalleComponent implements OnInit {
   }
 
   inicializar(estudiante:EstudiantesLista) {
-
     this.form = this.fb.group({
-      estudiante:  estudiante.nombre,
+      estudiante:  estudiante.nombre + " " + estudiante.apellido,
       edad:  estudiante.edad,
       correo: estudiante.correo,
       telefono:  estudiante.telefono,

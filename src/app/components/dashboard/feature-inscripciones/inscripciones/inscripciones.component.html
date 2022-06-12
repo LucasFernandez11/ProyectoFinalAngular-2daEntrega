@@ -6,7 +6,7 @@
   <div class="example-spacer"></div>
   <span class="example-spacer"></span>
 
-  <button class="agregar" *ngIf="admin" mat-raised-button color="primary" routerLink="/dashboard/crear-estudiante">+Nueva Inscripcion
+  <button class="agregar" *ngIf="admin" mat-raised-button color="primary" routerLink="/dashboard/crear-inscripcion">+Nueva Inscripcion
    </button>
 
   <div *ngIf="listaInscripciones.length > 0">
@@ -49,7 +49,7 @@
               <a *ngIf="admin" class="pointer mx-3" (click)="openDialog(element.id)" matTooltip="Editar Datos" style="color: #1c89c9" >
               <mat-icon>edit</mat-icon>
               </a>
-              <a *ngIf="admin" class="pointer mx-3" (click)="eliminarEstudiante(i)" matTooltip="Eliminar Alumno" style="color: rgb(170, 24, 24)">
+              <a *ngIf="admin" class="pointer mx-3" (click)="eliminarInscripciones(i)" matTooltip="Eliminar Alumno" style="color: rgb(170, 24, 24)">
               <mat-icon>delete</mat-icon>
               </a>
           </td> 

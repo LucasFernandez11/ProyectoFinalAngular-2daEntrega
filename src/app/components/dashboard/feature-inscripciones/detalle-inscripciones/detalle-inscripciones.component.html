@@ -1,44 +1,13 @@
-<div class="container">
-
-    <h1 appTwenty>Detalle de Inscripcion</h1>
-    <mat-card class="mt-4">
-      <form [formGroup]="form">
-  
-        <mat-grid-list cols="4" rowHeight="70px">
-  
-          <mat-grid-tile [colspan]="1" [rowspan]="1">
-            <mat-form-field class="ancho">
-              <mat-label>Estudiante</mat-label>            
-              <input matInput  autocomplete="off" value={{form.value.estudiante}}>
-            </mat-form-field>
-          </mat-grid-tile>
-         
-          <mat-grid-tile [colspan]="3" [rowspan]="5">
-            <img width="250" height="250" src="../../../../../assets/img/usuario.png" alt="logo de usuario">
-          </mat-grid-tile>
-          
-          <mat-grid-tile [colspan]="1" [rowspan]="1">
-            <mat-form-field class="ancho">
-              <mat-label>Curso</mat-label>
-              <input matInput autocomplete="off" value={{form.value.curso}}>
-            </mat-form-field>
-          </mat-grid-tile>
-          
-          <mat-grid-tile [colspan]="1" [rowspan]="1">
-            <mat-form-field class="ancho">
-              <mat-label>Dias</mat-label>
-              <input matInput autocomplete="off" value={{form.value.dias}}>
-            </mat-form-field>
-          </mat-grid-tile>       
-  
-          
-          <mat-grid-tile [colspan]="1" [rowspan]="1">
-            <button class=" mx-4" mat-raised-button color="warn" (click)="cerrar()">Cerrar</button>
-            
-          </mat-grid-tile>
-  
-        </mat-grid-list>
-  
-      </form>
-    </mat-card>
+<div class="container card1">
+    <h1 appTwenty>Detalle de Inscripcion</h1>     
+      <div class="card" role="list">
+        <h5 class="card-header" role="listitem">{{form.value.estudiante}}</h5>
+        <div class="card-body">
+          <p class="card-text" role="listitem">Curso: {{form.value.curso}}</p>
+          <p class="card-text" role="listitem">
+            <mat-list-item role="listitem">Dias: {{form.value.dias}}</mat-list-item>
+          </p>         
+          <a (click)="cerrar()" class="btn btn-primary">Cerrar</a>
+        </div>
+      </div>  
   </div>

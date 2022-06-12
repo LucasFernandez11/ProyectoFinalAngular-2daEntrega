@@ -23,28 +23,23 @@ export class InscripcionesService {
   ];
   constructor() { }
 
-  getEstudiantes(){
+  getInscripciones(){
     return this.inscripciones.slice();
   }
 
-  eliminarEstudiante(index: number){
+  eliminarInscripciones(index: number){
     this.inscripciones.splice(index, 1);
   }
 
-  editarEstudiante(estudiante: Inscripciones){
-      const index = this.inscripciones.findIndex(c => c.id === estudiante.id)
-      this.inscripciones[index] = estudiante;
+  editarInscripciones(inscripcion: Inscripciones){
+      const index = this.inscripciones.findIndex(c => c.id === inscripcion.id)
+      this.inscripciones[index] = inscripcion;
   }
 
-  agregarEstudiante(estudiante: Inscripciones){
-    this.inscripciones.unshift(estudiante);
+  agregarInscripciones(inscripcion: Inscripciones){
+    this.inscripciones.unshift(inscripcion);
 
   }
 
-  editEstudiante(estudiante: Inscripciones) {
-    const index = this.inscripciones.findIndex(c => c.id === estudiante.id);
-    this.inscripciones[index] = estudiante;
-
-
-  }
+ 
 }

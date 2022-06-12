@@ -1,15 +1,13 @@
+import { MaterialModule } from 'src/app/components/material/material.module';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { EstudiantesService } from 'src/app/services/estudiantes.service';
 import { Cursos } from 'src/app/shared/interfaces/cursos';
-import {  EstudiantesLista } from 'src/app/shared/interfaces/estudiantes';
-import { CursosService } from '../../feature-cursos/cursos/services/cursos.service';
+import { EstudiantesLista } from 'src/app/shared/interfaces/estudiantes';
 import { Router } from '@angular/router';
-import { EditarInscripcionComponent } from '../../feature-inscripciones/editar-inscripciones/editar-inscripcion.component';
 import { ListaEstudiantesService } from '../services/listaEstudiantes.service';
 import { EditarListaEstudiantesComponent } from '../editar-lista-estudiantes/editar-lista-estudiantes.component';
 import { DetalleComponent } from '../detalle/detalle.component';

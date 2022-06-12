@@ -56,7 +56,7 @@ export class EditarInscripcionComponent implements OnInit {
      
     }
 
-    this._inscripcionesService.editEstudiante(formInscripciones);
+    this._inscripcionesService.editarInscripciones(formInscripciones);
       this.router.navigate(['/dashboard/inscripciones']);
       this._snackBar.open('Estudiante editado exitosamente','', {
         horizontalPosition: 'center',

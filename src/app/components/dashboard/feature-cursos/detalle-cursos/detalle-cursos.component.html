@@ -1,0 +1,19 @@
+<div class="container card1">
+    <h1 appTwenty>Detalle de Curso</h1>     
+      <div class="card" role="list">
+        <h5 class="card-header fs-4" role="listitem">{{form.value.cursoNombre}}</h5>
+        <div class="card-body">
+          <p class="card-text" role="listitem">Dias: {{form.value.cursoDias}}</p>
+          <p class="card-text" role="listitem">
+            <mat-list-item role="listitem">Precio: {{form.value.precio}}</mat-list-item>
+          </p>         
+          <p class="card-text" role="listitem">
+            <mat-list-item role="listitem">Profesor: {{form.value.profesor}}</mat-list-item>
+          </p>         
+          <p class="card-text" role="listitem">
+            <mat-list-item role="listitem">Detalle: {{form.value.detalle}}</mat-list-item>
+          </p>         
+          <a (click)="cerrar()" class="btn btn-primary">Cerrar</a>
+        </div>
+      </div>  
+  </div>
