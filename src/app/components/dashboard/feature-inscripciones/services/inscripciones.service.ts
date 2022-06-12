@@ -1,5 +1,6 @@
+import { Inscripciones } from './../../../../shared/interfaces/inscripciones';
 
-import { Estudiantes, EstudiantesLista,Inscripciones } from 'src/app/shared/interfaces/estudiantes';
+import { Estudiantes, EstudiantesLista } from 'src/app/shared/interfaces/estudiantes';
 import { Injectable } from '@angular/core';
 
 

@@ -1,19 +1,19 @@
-import { InscripcionesService } from './../../feature-estudiantes/services/inscripciones.service';
+import { InscripcionesService } from '../services/inscripciones.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import {  Inscripciones } from 'src/app/shared/interfaces/estudiantes';
+import {  Inscripciones } from 'src/app/shared/interfaces/inscripciones';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Component, Inject, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'app-crear-estudiante',
-  templateUrl: './crear-estudiante.component.html',
-  styleUrls: ['./crear-estudiante.component.scss']
+  selector: 'app-crear-inscripciones',
+  templateUrl: './crear-inscripcion.component.html',
+  styleUrls: ['./crear-inscripcion.component.scss']
 })
 
 
-export class CrearEstudianteComponent implements OnInit {
+export class CrearInscripcionesComponent implements OnInit {
   cursos= new FormControl('');
   cursosList: any[] = ['react', 'angular', 'vue'];
   dias: any[] = ['lunes y miercoles', 'martes y jueves', 'sabado', 'miercoles y viernes'];

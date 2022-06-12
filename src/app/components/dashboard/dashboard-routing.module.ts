@@ -1,4 +1,5 @@
-import { CrearEstudianteComponent } from './feature-inscripciones/crear-inscripcion/crear-estudiante.component';
+import { CrearListaEstudiantesComponent } from './feature-estudiantes/crear-lista-estudiantes/crear-lista-estudiantes.component';
+import { CrearInscripcionesComponent } from './feature-inscripciones/crear-inscripcion/crear-inscripcion.component';
 import { InscripcionesComponent } from './feature-inscripciones/inscripciones/inscripciones.component';
 import { InicioComponent } from '../../core/inicio/inicio.component';
 import { DashboardComponent } from './dashboard.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
       {path: '', component: InicioComponent},
       {path: 'estudiantes', component: ListaEstudiantesComponent},
       {path: 'inscripciones', component: InscripcionesComponent},
-      {path: 'crear-estudiante', component: CrearEstudianteComponent},    
+      {path: 'crear-inscripcion', component: CrearInscripcionesComponent},    
+      {path: 'crear-estudiante', component: CrearListaEstudiantesComponent},    
       {path: 'cursos', component: CursosComponent}
     ]
   }

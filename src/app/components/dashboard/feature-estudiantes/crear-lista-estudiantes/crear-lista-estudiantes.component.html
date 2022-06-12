@@ -17,26 +17,23 @@
         <mat-grid-tile [colspan]="3" [rowspan]="5">
           <img width="250" height="250" src="../../../../../assets/img/usuario.png" alt="logo de usuario">
         </mat-grid-tile>
+
         <mat-grid-tile [colspan]="1" [rowspan]="1">
             <mat-form-field class="ancho">
-                <mat-label>Curso</mat-label>
-                <input matInput autocomplete="off" formControlName="curso">
+                <mat-label>Edad</mat-label>
+                <input matInput autocomplete="off" formControlName="edad">
               </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile [colspan]="1" [rowspan]="1">
             <mat-form-field class="ancho">
-                <mat-label>Nota</mat-label>
-                <mat-select formControlName="nota">
-                  <mat-option *ngFor="let item of notas" [value]="item">
-                    {{item}}
-                  </mat-option>
-                </mat-select>
+                <mat-label>Correo</mat-label>
+                <input matInput autocomplete="off" formControlName="correo">
               </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile [colspan]="1" [rowspan]="1">
             <mat-form-field class="ancho">
-                <mat-label>Usuario</mat-label>
-                <input matInput autocomplete="off" formControlName="usuario">
+                <mat-label>Telefono</mat-label>
+                <input matInput autocomplete="off" formControlName="telefono">
               </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile [colspan]="1" [rowspan]="1">

@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h1 appTwenty>Detalles del alumno</h1>
+    <h1 appTwenty>Detalle de Inscripcion</h1>
     <mat-card class="mt-4">
       <form [formGroup]="form">
   
@@ -19,24 +19,19 @@
           
           <mat-grid-tile [colspan]="1" [rowspan]="1">
             <mat-form-field class="ancho">
-              <mat-label>Edad</mat-label>
-              <input matInput autocomplete="off" value={{form.value.edad}}>
+              <mat-label>Curso</mat-label>
+              <input matInput autocomplete="off" value={{form.value.curso}}>
             </mat-form-field>
           </mat-grid-tile>
           
           <mat-grid-tile [colspan]="1" [rowspan]="1">
             <mat-form-field class="ancho">
-              <mat-label>Correo</mat-label>
-              <input matInput autocomplete="off" value={{form.value.correo}}>
+              <mat-label>Dias</mat-label>
+              <input matInput autocomplete="off" value={{form.value.dias}}>
             </mat-form-field>
           </mat-grid-tile>       
   
-          <mat-grid-tile [colspan]="1" [rowspan]="1">
-            <mat-form-field class="ancho">
-              <mat-label>Telefono</mat-label>
-              <input matInput autocomplete="off" value={{form.value.telefono}}>
-            </mat-form-field>
-          </mat-grid-tile>
+          
           <mat-grid-tile [colspan]="1" [rowspan]="1">
             <button class=" mx-4" mat-raised-button color="warn" (click)="cerrar()">Cerrar</button>
             

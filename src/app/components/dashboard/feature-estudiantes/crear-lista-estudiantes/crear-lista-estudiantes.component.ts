@@ -11,7 +11,7 @@ import { EstudiantesService } from 'src/app/services/estudiantes.service';
   styleUrls: ['./crear-lista-estudiantes.component.scss']
 })
 export class CrearListaEstudiantesComponent implements OnInit {
-  notas: any[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+ 
 
   form: FormGroup;
   value: any = null;
@@ -28,9 +28,9 @@ export class CrearListaEstudiantesComponent implements OnInit {
 
     this.form = this.fb.group({
       estudiante:  ["",  [Validators.required, Validators.maxLength(10), Validators.pattern(/^([Aa-zA-ZáéíóúÁÉÍÓÚÑñ]{2,}\s?){2,4}$/)]],
-      curso:  ["",  [Validators.required]],
-      nota: ["",  [Validators.required]],
-       usuario:  ["", [Validators.required]],
+      edad:  ["",  [Validators.required]],
+      correo: ["",  [Validators.required]],
+       telefono:  ["", [Validators.required]],
     })
    }
 

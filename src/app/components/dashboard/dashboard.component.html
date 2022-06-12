@@ -1,18 +1,22 @@
-<app-navbar></app-navbar>
-
-<mat-sidenav-container class="altura" >
-  <mat-sidenav mode="side" [(opened)]="opened">
-    <div class="side">
-      <button class="menu" mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}} </button>
-    </div>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <button class="btn btn-secondary" (click)="opened=!opened">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-
-<app-footer></app-footer>
-
+<div class="contenedor">
+  
+  <app-navbar></app-navbar>
+  
+  <mat-sidenav-container class="altura contenedor" >
+    <mat-sidenav class="bg-barra sidenav" mode="side" [(opened)]="opened">
+      <div class="side">
+        <a class="menu" mat-button *ngFor="let item of menu" [routerLink]="item.redirect">
+          {{item.nombre}}</a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <button class="btn btn-secondary" (click)="opened=!opened">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  <app-footer></app-footer>
+  
+</div>

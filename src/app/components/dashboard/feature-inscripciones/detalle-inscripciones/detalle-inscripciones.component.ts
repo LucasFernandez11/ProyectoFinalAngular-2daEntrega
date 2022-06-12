@@ -4,6 +4,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Estudiantes, EstudiantesLista } from 'src/app/shared/interfaces/estudiantes';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Inscripciones } from 'src/app/shared/interfaces/inscripciones';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class DetalleInscripcionesComponent implements OnInit {
   form: FormGroup;
   constructor(
     public dialogRef: MatDialogRef<CrearListaEstudiantesComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: EstudiantesLista,
+    @Inject(MAT_DIALOG_DATA) public data: Inscripciones,
     private router: Router,
     private fb : FormBuilder,    
   ) {  
@@ -29,13 +30,13 @@ export class DetalleInscripcionesComponent implements OnInit {
     this.inicializar(this.data);
   }
 
-  inicializar(estudiante:EstudiantesLista) {
+  inicializar(estudiante:Inscripciones) {
 
     this.form = this.fb.group({
       estudiante:  estudiante.nombre,
-      edad:  estudiante.edad,
-      correo: estudiante.correo,
-      telefono:  estudiante.telefono,
+     curso:  estudiante.curso,
+      dias: estudiante.dias,
+     
     })
   }
   

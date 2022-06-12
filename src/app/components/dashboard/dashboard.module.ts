@@ -8,11 +8,11 @@ import { Inject, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { CrearEstudianteComponent } from './feature-inscripciones/crear-inscripcion/crear-estudiante.component';
+import { CrearInscripcionesComponent } from './feature-inscripciones/crear-inscripcion/crear-inscripcion.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
-import { EditarEstudianteComponent } from './feature-inscripciones/editar-inscripciones/editar-estudiante.component';
-import { ApellidoPipeModule } from 'src/app/shared/pipes/apellido.pipe';
+import { EditarInscripcionComponent } from './feature-inscripciones/editar-inscripciones/editar-inscripcion.component';
+
 import { FooterComponent } from 'src/app/core/footer/footer.component';
 
 import { ListaEstudiantesComponent } from './feature-estudiantes/estudiantes/listaEstudiantes.component';
@@ -31,9 +31,9 @@ import { EditarListaEstudiantesComponent } from './feature-estudiantes/editar-li
     DashboardComponent,
     InicioComponent,
     NavbarComponent,
-    CrearEstudianteComponent,
+    CrearInscripcionesComponent,
     TwentyDirective,
-    EditarEstudianteComponent,
+    EditarInscripcionComponent,
     FooterComponent,   
     ListaEstudiantesComponent,
    InscripcionesComponent,
@@ -49,7 +49,7 @@ import { EditarListaEstudiantesComponent } from './feature-estudiantes/editar-li
     MaterialModule,
     FormsModule,
     MatDialogModule,
-    ApellidoPipeModule,
+   
     FeatureEstudiantesModule
 
   ], exports: [

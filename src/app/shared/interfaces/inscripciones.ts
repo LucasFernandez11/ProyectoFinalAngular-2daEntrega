@@ -1,4 +1,9 @@
 export interface Inscripciones {
-  cursos: string;
-  
+  id: number;
+  nombre: string;
+  apellido: string;
+  curso:string;
+  dias: string;
+ 
+
 }

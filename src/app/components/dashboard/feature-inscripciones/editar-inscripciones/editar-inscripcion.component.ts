@@ -1,9 +1,10 @@
-import { InscripcionesService } from './../../feature-estudiantes/services/inscripciones.service';
+import { Inscripciones } from './../../../../shared/interfaces/inscripciones';
+import { InscripcionesService } from '../services/inscripciones.service';
 
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Estudiantes,Inscripciones  } from 'src/app/shared/interfaces/estudiantes';
-import { CrearEstudianteComponent } from '../crear-inscripcion/crear-estudiante.component';
+import { Estudiantes } from 'src/app/shared/interfaces/estudiantes';
+import { CrearInscripcionesComponent } from '../crear-inscripcion/crear-inscripcion.component';
 
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
@@ -11,19 +12,21 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-editar-estudiante',
-  templateUrl: './editar-estudiante.component.html',
-  styleUrls: ['./editar-estudiante.component.scss']
+  templateUrl: './editar-inscripcion.component.html',
+  styleUrls: ['./editar-inscripcion.component.scss']
 })
 
 
-export class EditarEstudianteComponent implements OnInit {
+export class EditarInscripcionComponent implements OnInit {
   cursos= new FormControl('');
-  cursosList: any[] = ['react', 'angular', 'vue'];
+  opcionSeleccionada: string  = '0';
+  verSeleccion: string = '';
+  cursosList;
   dias: any[] = ['lunes y miercoles', 'martes y jueves', 'sabado', 'miercoles y viernes'];
   form: FormGroup;
   value: any = null;
   
-  constructor (public dialogRef: MatDialogRef<CrearEstudianteComponent>,
+  constructor (public dialogRef: MatDialogRef<CrearInscripcionesComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Inscripciones,  private fb : FormBuilder,
     private _inscripcionesService: InscripcionesService,
     private router: Router,
@@ -31,13 +34,17 @@ export class EditarEstudianteComponent implements OnInit {
   ){
       const navigation = this.router.getCurrentNavigation();
       this.value = navigation?.extras?.state;
-
+      this.cursosList = ['react', 'angular', 'vue']
    }
 
   ngOnInit(): void {
    this.inicializar(this.data);
 
   }
+  capturar() {
+    // Pasamos el valor seleccionado a la variable verSeleccion
+    this.verSeleccion = this.opcionSeleccionada;
+}
 
   onNoClick(): void {
     this.dialogRef.close();

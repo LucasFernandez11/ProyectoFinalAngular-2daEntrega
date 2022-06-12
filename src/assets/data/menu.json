@@ -1,6 +1,6 @@
 [
     {
-        "nombre":"Inicio",
+        "nombre": "Inicio",
         "redirect":"/dashboard"
     },
     {

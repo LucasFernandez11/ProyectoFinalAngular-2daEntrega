@@ -3,7 +3,16 @@
     display: flex;
     justify-content: flex-end;
 }
-
+.toolbar-container{
+    background-color: transparent;
+    border-radius: 50px;
+    
+  }
+  .bg-div{
+    background-color: rgba(226, 81, 23, 0.774);;
+    box-shadow: 30px 30px 30px  rgba(226, 81, 23, 0.212);
+    
+  }
 
 
 .footer i {

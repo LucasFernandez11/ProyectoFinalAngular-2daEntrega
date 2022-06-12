@@ -1,5 +1,19 @@
 .contenedor{
     height: 100%;
+    background-image: url('https://img.freepik.com/foto-gratis/fondo-pared-ladrillo-textura-negro_53876-63583.jpg');
+    background-size: cover;
+}
+.bg-barra{
+  background-color: rgba(226, 80, 23, 0.3);
+}
+.boton{
+  background-color: rgba(226, 81, 23, 0.774);
+}
+.sidenav a {
+  color: #fff;
+}
+.sidenav i {
+  padding-right: 10px;
 }
 
 .side {
@@ -10,11 +24,4 @@
   height: calc(100% - 130px);
 }
 
-.butn {
-background-color: #673AB7;
-color: white;
-padding: 10px;
-border: 1px white;
-border-radius: 6px;
-margin: 10px;
-}
+

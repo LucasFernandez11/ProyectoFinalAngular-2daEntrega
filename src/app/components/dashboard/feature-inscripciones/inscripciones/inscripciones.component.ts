@@ -1,18 +1,13 @@
-import { InscripcionesService } from './../../feature-estudiantes/services/inscripciones.service';
+import { InscripcionesService } from '../services/inscripciones.service';
 import { DetalleInscripcionesComponent } from '../detalle-inscripciones/detalle-inscripciones.component';
-import { ListaEstudiantesService } from '../../feature-estudiantes/services/listaEstudiantes.service';
 import { NavigationExtras, Router } from '@angular/router';
-
-import { EstudiantesService } from '../../../../services/estudiantes.service';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { Estudiantes, Inscripciones } from 'src/app/shared/interfaces/estudiantes';
-import { TwentyDirective } from 'src/app/shared/directivas/twenty.directive';
+import { Inscripciones } from 'src/app/shared/interfaces/inscripciones';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { EditarEstudianteComponent } from '../editar-inscripciones/editar-estudiante.component';
-import { ListaEstudiantesComponent } from '../../feature-estudiantes/estudiantes/listaEstudiantes.component';
+import { EditarInscripcionComponent } from '../editar-inscripciones/editar-inscripcion.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 
@@ -27,10 +22,10 @@ export class InscripcionesComponent implements OnInit {
 
   datosUsuario: string;
 
-  listaEstudiantes: Inscripciones[] = [];
+  listaInscripciones: Inscripciones[] = [];
 
   admin: boolean = false;
-
+  verSeleccion:string = "";
 
   displayedColumns: string[] = ['nombre', 'curso', 'dias', 'acciones'];
 
@@ -81,8 +76,8 @@ export class InscripcionesComponent implements OnInit {
     this.dataSource.sort = this.sort
   }
   cargarEstudiantes(){
-    this.listaEstudiantes = this._inscripcionesService.getEstudiantes();
-    this.dataSource = new MatTableDataSource(this.listaEstudiantes);
+    this.listaInscripciones = this._inscripcionesService.getEstudiantes();
+    this.dataSource = new MatTableDataSource(this.listaInscripciones);
     this.ngAfterViewInit();
   }
 
@@ -130,7 +125,7 @@ export class InscripcionesComponent implements OnInit {
 
  openDialog(id_delform:number): void {
   const estudiante = this._inscripcionesService.getEstudiantes().find(c => c.id === id_delform);
-  const dialogRef = this.dialog.open(EditarEstudianteComponent, {
+  const dialogRef = this.dialog.open(EditarInscripcionComponent, {
     data: estudiante,
     width: '1250px',
 
