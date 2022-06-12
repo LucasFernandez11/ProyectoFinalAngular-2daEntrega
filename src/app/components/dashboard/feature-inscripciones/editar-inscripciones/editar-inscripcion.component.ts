@@ -18,10 +18,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 export class EditarInscripcionComponent implements OnInit {
-  cursos= new FormControl('');
-  opcionSeleccionada: string  = '0';
-  verSeleccion: string = '';
-  cursosList;
+ 
+  
+  cursos:any[]= ['react', 'angular', 'vue', 'react y angular', 'react y vue', 'angular y vue'];
   dias: any[] = ['lunes y miercoles', 'martes y jueves', 'sabado', 'miercoles y viernes'];
   form: FormGroup;
   value: any = null;
@@ -34,17 +33,14 @@ export class EditarInscripcionComponent implements OnInit {
   ){
       const navigation = this.router.getCurrentNavigation();
       this.value = navigation?.extras?.state;
-      this.cursosList = ['react', 'angular', 'vue']
+     
    }
 
   ngOnInit(): void {
    this.inicializar(this.data);
 
   }
-  capturar() {
-    // Pasamos el valor seleccionado a la variable verSeleccion
-    this.verSeleccion = this.opcionSeleccionada;
-}
+  
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -77,7 +73,7 @@ volver(){
 inicializar(estudiante:Inscripciones) {
 
   this.form = this.fb.group({
-    estudiante:  ["",  [Validators.required, Validators.maxLength(10), Validators.pattern(/^([Aa-zA-ZáéíóúÁÉÍÓÚÑñ]{2,}\s?){2,4}$/)]],
+    estudiante:  ["",  [Validators.required, Validators.maxLength(40), ]],
     curso:  ["",  [Validators.required]],
     dias: ["",  [Validators.required]],
     

@@ -14,8 +14,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 
 
 export class CrearInscripcionesComponent implements OnInit {
-  cursos= new FormControl('');
-  cursosList: any[] = ['react', 'angular', 'vue'];
+  
+  cursos: any[] = ['react', 'angular', 'vue', 'react y angular', 'react y vue', 'angular y vue'];
   dias: any[] = ['lunes y miercoles', 'martes y jueves', 'sabado', 'miercoles y viernes'];
   form: FormGroup;
   value: any = null;
@@ -29,8 +29,8 @@ export class CrearInscripcionesComponent implements OnInit {
                  this.value = navigation?.extras?.state;
 
             this.form = this.fb.group({
-              estudiante:  ["",  [Validators.required, Validators.maxLength(10), Validators.pattern(/^([Aa-zA-ZáéíóúÁÉÍÓÚÑñ]{2,}\s?){2,4}$/)]],
-              cursos:  ["",  [Validators.required]],
+              estudiante:  ["",  [Validators.required, Validators.maxLength(40), Validators.pattern(/^([Aa-zA-ZáéíóúÁÉÍÓÚÑñ]{2,}\s?){2,4}$/)]],
+              curso:  ["",  [Validators.required]],
               dias: ["",  [Validators.required]],
               
             });

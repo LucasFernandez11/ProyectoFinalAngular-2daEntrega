@@ -25,7 +25,7 @@ export class InscripcionesComponent implements OnInit {
   listaInscripciones: Inscripciones[] = [];
 
   admin: boolean = false;
-  verSeleccion:string = "";
+  
 
   displayedColumns: string[] = ['nombre', 'curso', 'dias', 'acciones'];
 

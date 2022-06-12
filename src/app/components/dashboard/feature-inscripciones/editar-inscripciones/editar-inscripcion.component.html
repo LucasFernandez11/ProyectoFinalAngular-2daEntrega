@@ -19,10 +19,10 @@
         </mat-grid-tile>
 
         <mat-grid-tile [colspan]="1" [rowspan]="1">
-          <mat-form-field appearance="fill" class="ancho">
+          <mat-form-field  class="ancho">
             <mat-label>Cursos</mat-label>
-            <mat-select [ngModel]="opcionSeleccionada" (change)="capturar()" multiple>
-              <mat-option *ngFor="let curso of cursosList" [value]="curso">{{curso}}</mat-option>
+            <mat-select  formControlName="curso">
+              <mat-option *ngFor="let item of cursos" [value]="item">{{item}}</mat-option>
             </mat-select>
           </mat-form-field>            
         </mat-grid-tile>
