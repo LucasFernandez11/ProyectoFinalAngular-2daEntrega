@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: column;
 }
+.altura{
+  height: calc(100% - 130px);
+}
 
 .butn {
 background-color: #673AB7;

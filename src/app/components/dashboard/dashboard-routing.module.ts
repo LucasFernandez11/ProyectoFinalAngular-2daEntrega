@@ -1,8 +1,8 @@
-import { CrearEstudianteComponent } from './feature-inscripciones/crear-estudiante/crear-estudiante.component';
-import { EstudiantesComponent } from './feature-inscripciones/estudiantes/estudiantes.component';
+import { CrearEstudianteComponent } from './feature-inscripciones/crear-inscripcion/crear-estudiante.component';
+import { InscripcionesComponent } from './feature-inscripciones/inscripciones/inscripciones.component';
 import { InicioComponent } from '../../core/inicio/inicio.component';
 import { DashboardComponent } from './dashboard.component';
-import { ReportesComponent } from './reportes/reportes.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CursosComponent } from './feature-cursos/cursos/cursos.component';
@@ -13,9 +13,8 @@ const routes: Routes = [
     path: '',component: DashboardComponent, children: [
       {path: '', component: InicioComponent},
       {path: 'estudiantes', component: ListaEstudiantesComponent},
-      {path: 'inscripciones', component: EstudiantesComponent},
-      {path: 'crear-estudiante', component: CrearEstudianteComponent},
-      {path: 'reportes', component: ReportesComponent},
+      {path: 'inscripciones', component: InscripcionesComponent},
+      {path: 'crear-estudiante', component: CrearEstudianteComponent},    
       {path: 'cursos', component: CursosComponent}
     ]
   }

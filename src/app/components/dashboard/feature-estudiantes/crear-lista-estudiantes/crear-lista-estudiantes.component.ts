@@ -6,14 +6,11 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { EstudiantesService } from 'src/app/services/estudiantes.service';
 
 @Component({
-  selector: 'app-crear-estudiante',
-  templateUrl: './crear-estudiante.component.html',
-  styleUrls: ['./crear-estudiante.component.scss']
+  selector: 'app-crear-lista-estudiantes',
+  templateUrl: './crear-lista-estudiantes.component.html',
+  styleUrls: ['./crear-lista-estudiantes.component.scss']
 })
-
-
-export class CrearEstudianteComponent implements OnInit {
-
+export class CrearListaEstudiantesComponent implements OnInit {
   notas: any[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
   form: FormGroup;
@@ -65,5 +62,5 @@ export class CrearEstudianteComponent implements OnInit {
     this.router.navigate(['/dashboard/estudiantes']);
     console.log(this.form.value);
   }
-}
 
+}

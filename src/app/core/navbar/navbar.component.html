@@ -1,11 +1,22 @@
-<mat-toolbar class="nav">
-  <span>Coder-App</span>
+<mat-toolbar class="header mat-elevation-z4">
+  <span>
+      <a routerLink="/">
+          <img class="logo" src="https://user-images.githubusercontent.com/48678280/88862734-4903af80-d201-11ea-968b-9c939d88a37c.gif" alt="logo">
+      </a>
+  </span>
+  <span class="title-group">
+      <a>
+          <i class="material-icons">
+              star
+          </i>
+          Portal de Estudiantes
+      </a>
+  </span>
   <span class="example-spacer"></span>
-  <!-- <button class="menu" mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}} </button> -->
-
-  <span class="example-spacer"></span>
-<button mat-icon-button routerLink="/login">
+  <button mat-icon-button routerLink="/login">
     <mat-icon>logout</mat-icon>
 </button>
 </mat-toolbar>
+
+
 

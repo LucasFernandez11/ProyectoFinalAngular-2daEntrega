@@ -1,48 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-img {
-  width: 80px;
-  height: 60px;
+.container {
+  max-width: 960px;
+   
+}
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #8e8e8e;
+  transition: color .15s ease-in-out;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
-h1 {
-  font-family: 'Inter';
-  text-align: center;
-  letter-spacing: 3px;
-  border-bottom: 1px solid rgb(152, 5, 144);
-  margin: 15px;
-  padding: 20px;
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
 }
 
-
-.inicio {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-
-
-}
-.comps {
-  border-bottom: 1px solid rgb(152, 5, 144);
-  font-family:  'Inter';
-  text-align: center;
-  padding: 60px;
-  margin: 15px;
-
-
-
-}
-.comps:hover {
-  background-color: rgba(128, 128, 128, 0.275);
-  cursor: pointer;
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
 }
 
-h2 {
-  font-family:  'Inter';
-  letter-spacing: 2px;
-}
-
-.tool {
-  font-family:  'Inter';
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
 }
 

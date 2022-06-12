@@ -1,3 +1,4 @@
+import { DetalleComponent } from './feature-estudiantes/detalle/detalle.component';
 
 import { TwentyDirective } from 'src/app/shared/directivas/twenty.directive';
 import { NavbarComponent } from '../../core/navbar/navbar.component';
@@ -7,16 +8,19 @@ import { Inject, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { CrearEstudianteComponent } from './feature-inscripciones/crear-estudiante/crear-estudiante.component';
+import { CrearEstudianteComponent } from './feature-inscripciones/crear-inscripcion/crear-estudiante.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
-import { EditarEstudianteComponent } from './feature-inscripciones/editar-estudiante/editar-estudiante.component';
+import { EditarEstudianteComponent } from './feature-inscripciones/editar-inscripciones/editar-estudiante.component';
 import { ApellidoPipeModule } from 'src/app/shared/pipes/apellido.pipe';
 import { FooterComponent } from 'src/app/core/footer/footer.component';
-import { ReportesComponent } from './reportes/reportes.component';
+
 import { ListaEstudiantesComponent } from './feature-estudiantes/estudiantes/listaEstudiantes.component';
-import { EstudiantesComponent } from './feature-inscripciones/estudiantes/estudiantes.component';
+import { InscripcionesComponent } from './feature-inscripciones/inscripciones/inscripciones.component';
 import { CursosComponent } from './feature-cursos/cursos/cursos.component';
+import { FeatureEstudiantesModule } from './feature-inscripciones/feature-inscripciones.module';
+import { CrearListaEstudiantesComponent } from './feature-estudiantes/crear-lista-estudiantes/crear-lista-estudiantes.component';
+import { EditarListaEstudiantesComponent } from './feature-estudiantes/editar-lista-estudiantes/editar-lista-estudiantes.component';
 
 
 
@@ -30,11 +34,13 @@ import { CursosComponent } from './feature-cursos/cursos/cursos.component';
     CrearEstudianteComponent,
     TwentyDirective,
     EditarEstudianteComponent,
-    FooterComponent,
-    ReportesComponent,
+    FooterComponent,   
     ListaEstudiantesComponent,
-    EstudiantesComponent,
-    CursosComponent
+   InscripcionesComponent,
+    CursosComponent,
+    EditarListaEstudiantesComponent,
+    CrearListaEstudiantesComponent,
+    DetalleComponent
 
   ],
   imports: [
@@ -43,8 +49,11 @@ import { CursosComponent } from './feature-cursos/cursos/cursos.component';
     MaterialModule,
     FormsModule,
     MatDialogModule,
-    ApellidoPipeModule
+    ApellidoPipeModule,
+    FeatureEstudiantesModule
 
+  ], exports: [
+    FeatureEstudiantesModule
   ]
 
 

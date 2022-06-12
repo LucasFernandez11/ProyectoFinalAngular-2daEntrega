@@ -1,0 +1,50 @@
+<div class="container">
+
+  <h1 appTwenty>Editar Estudiante</h1>
+  <mat-card class="mt-4">
+    <form [formGroup]="form">
+
+      <mat-grid-list cols="4" rowHeight="70px">
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <mat-form-field class="ancho">
+            <mat-label>Estudiante</mat-label>
+            <input matInput autocomplete="off" formControlName="estudiante">
+          </mat-form-field>
+        </mat-grid-tile>
+       
+        <mat-grid-tile [colspan]="3" [rowspan]="5">
+          <img width="250" height="250" src="../../../../../assets/img/usuario.png" alt="logo de usuario">
+        </mat-grid-tile>
+        
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <mat-form-field class="ancho">
+            <mat-label>Edad</mat-label>
+            <input matInput autocomplete="off" formControlName="edad">
+          </mat-form-field>
+        </mat-grid-tile>
+        
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <mat-form-field class="ancho">
+            <mat-label>Correo</mat-label>
+            <input matInput autocomplete="off" formControlName="correo">
+          </mat-form-field>
+        </mat-grid-tile>       
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <mat-form-field class="ancho">
+            <mat-label>Telefono</mat-label>
+            <input matInput autocomplete="off" formControlName="telefono">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <button class=" mx-4" mat-raised-button color="warn" (click)="volver()">Volver</button>
+          <button type="submit" [disabled]="form.invalid" (click)="editEstudiante(form)" class=" mx-4" mat-raised-button
+            color="primary">Aceptar</button>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+
+    </form>
+  </mat-card>
+</div>

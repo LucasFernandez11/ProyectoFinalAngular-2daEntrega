@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h1 appTwenty>Editar Estudiante</h1>
+    <h1 appTwenty>Editar Inscripcion</h1>
 
 
   <mat-card class="mt-4">
@@ -17,30 +17,31 @@
         <mat-grid-tile [colspan]="3" [rowspan]="5">
           <img width="250" height="250" src="../../../../../assets/img/usuario.png" alt="logo de usuario">
         </mat-grid-tile>
+
         <mat-grid-tile [colspan]="1" [rowspan]="1">
-            <mat-form-field class="ancho">
-                <mat-label>Curso</mat-label>
-                <input matInput autocomplete="off" formControlName="curso">
-              </mat-form-field>
+          <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Cursos</mat-label>
+            <mat-select [formControl]="cursos" multiple>
+              <mat-option *ngFor="let curso of cursosList" [value]="curso">{{curso}}</mat-option>
+            </mat-select>
+          </mat-form-field>            
         </mat-grid-tile>
+
+
         <mat-grid-tile [colspan]="1" [rowspan]="1">
             <mat-form-field class="ancho">
-                <mat-label>Nota</mat-label>
-                <mat-select formControlName="nota">
-                  <mat-option *ngFor="let item of notas" [value]="item">
+                <mat-label>Dias</mat-label>
+                <mat-select formControlName="dias">
+                  <mat-option *ngFor="let item of dias" [value]="item">
                     {{item}}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
         </mat-grid-tile>
+
+      
         <mat-grid-tile [colspan]="1" [rowspan]="1">
-            <mat-form-field class="ancho">
-                <mat-label>Usuario</mat-label>
-                <input matInput autocomplete="off" formControlName="usuario">
-              </mat-form-field>
-        </mat-grid-tile>
-        <mat-grid-tile [colspan]="1" [rowspan]="1">
-            <button class=" mx-4" mat-raised-button color="warn" (click)="volver()" >Volver</button> -->
+            <button class=" mx-4" mat-raised-button color="warn" (click)="volver()" >Volver</button>
             <button type="submit" [disabled]="form.invalid" (click)="editEstudiante(form)" class=" mx-4" mat-raised-button color="primary">Aceptar</button>
         </mat-grid-tile>
 
