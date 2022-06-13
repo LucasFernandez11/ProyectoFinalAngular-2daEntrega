@@ -1,48 +1,17 @@
-.container {
-  max-width: 960px;
-   
+.toolbar-container{
+  background-color: transparent;
+  border-radius: 50px;
+  
 }
-.site-header {
-  background-color: rgba(0, 0, 0, .85);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
+.bg-div{
+  background-color:rgba(226, 81, 23, 0.24);
+  border-radius: 30px;
+  box-shadow: 30px 30px 30px  rgba(226, 81, 23, 0.212);
+  
 }
-.site-header a {
-  color: #8e8e8e;
-  transition: color .15s ease-in-out;
-}
-.site-header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-.product-device {
-  position: absolute;
-  right: 10%;
-  bottom: -30%;
-  width: 300px;
-  height: 540px;
-  background-color: #333;
-  border-radius: 21px;
-  transform: rotate(30deg);
-}
-
-.product-device::before {
-  position: absolute;
-  top: 10%;
-  right: 10px;
-  bottom: 10%;
-  left: 10px;
-  content: "";
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: 5px;
-}
-
-.product-device-2 {
-  top: -25%;
-  right: auto;
-  bottom: 0;
-  left: 5%;
-  background-color: #e5e5e5;
-}
-
+.tipografia {
+  font-family: 'Inter';  
+  // margin: 15px;
+  // padding: 20px;
+  color:whitesmoke ;
+  }

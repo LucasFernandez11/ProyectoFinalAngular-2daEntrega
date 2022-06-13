@@ -6,6 +6,7 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 import { Component, Inject, OnInit } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-crear-inscripciones',
   templateUrl: './crear-inscripcion.component.html',
@@ -13,8 +14,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 })
 
 
-export class CrearInscripcionesComponent implements OnInit {
-  
+export class CrearInscripcionesComponent implements OnInit {  
   cursos: any[] = ['react', 'angular', 'vue', 'react y angular', 'react y vue', 'angular y vue'];
   dias: any[] = ['lunes y miercoles', 'martes y jueves', 'sabado', 'miercoles y viernes'];
   form: FormGroup;
@@ -53,7 +53,7 @@ export class CrearInscripcionesComponent implements OnInit {
 
     this._inscripcionesService.agregarInscripciones(estudiante);
     this.router.navigate(['/dashboard/inscripciones']);
-    this._snackBar.open('Inscripcion creada exitosamente','', {
+    this._snackBar.open(`Inscripcion creada exitosamente`, '', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
       duration: 1500,

@@ -1,7 +1,5 @@
-import { CrearListaEstudiantesComponent } from './../../feature-estudiantes/crear-lista-estudiantes/crear-lista-estudiantes.component';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Estudiantes, EstudiantesLista } from 'src/app/shared/interfaces/estudiantes';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Cursos } from 'src/app/shared/interfaces/cursos';
@@ -31,30 +29,22 @@ export class DetalleCursosComponent implements OnInit {
   }
 
   inicializar(curso:Cursos) {
-
     this.form = this.fb.group({
       cursoNombre:  curso.cursoNombre,
-     cursoDias:  curso.cursoDias,
+      cursoDias:  curso.cursoDias,
       precio: curso.precio,
       profesor: curso.profesor,
       detalle: curso.detalle,
-     
     })
   }
   
 
   cerrar(){
-    
     this.dialogRef.close();
-    
-
 }
 
   onNoClick(): void {
     this.dialogRef.close();
-    
   }
-
-
 
 }

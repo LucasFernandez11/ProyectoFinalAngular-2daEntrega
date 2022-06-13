@@ -1,12 +1,21 @@
-
+.body{
+  background-image: url('https://s1.eestatic.com/2017/08/25/actualidad/actualidad_241740064_129998126_1099x564.jpg');
+  background-size: cover;
+  background-attachment: fixed;       
+}
+.login{ 
+  background-color: rgba(222, 190, 177, 0.769); 
+  border-radius: 50px;
+  border: 1px solid black;
+  box-shadow: 30px 30px 30px  rgba(226, 80, 23, 0.3);
+}
 .login form{
   display: flex;
   margin: 25px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.315);
-
+  
 }
 .ancho{
     width: 80%;
@@ -19,9 +28,6 @@
 mat-form-field {
     width: 90%;
   }
-
-
-
 .example-spacer {
   margin: 21.8%;
 }
@@ -38,12 +44,6 @@ ul {
   list-style-type: none;
   margin-top: 4px;
 }
-
-.tit {
-  letter-spacing: 3px;
-  border-bottom: 1px solid rgb(152, 5, 144);
-}
-
 img {
   width: 300px;
   height: 300px;

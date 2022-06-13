@@ -1,6 +1,6 @@
-<div class="container card1">
-    <h1 appTwenty>Detalle de Inscripcion</h1>     
-      <div class="card" role="list">
+<h1 appTwenty>Detalle de Inscripcion</h1>     
+<div class="container-fluid d-flex justify-content-center ">
+      <div class="card mx-4" role="list">
         <h5 class="card-header" role="listitem">{{form.value.estudiante}}</h5>
         <div class="card-body">
           <p class="card-text" role="listitem">Curso: {{form.value.curso}}</p>
@@ -9,5 +9,8 @@
           </p>         
           <a (click)="cerrar()" class="btn btn-primary">Cerrar</a>
         </div>
-      </div>  
+      </div>
+      <div class="h-100 ">
+        <img src="https://i.pinimg.com/originals/46/ea/e8/46eae8a3f51ad0ce122ed786d63df56f.gif" alt="">  
+      </div>
   </div>

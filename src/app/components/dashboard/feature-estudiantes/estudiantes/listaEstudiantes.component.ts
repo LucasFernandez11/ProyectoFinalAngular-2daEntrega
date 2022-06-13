@@ -14,7 +14,7 @@ import { DetalleComponent } from '../detalle/detalle.component';
 
 
 @Component({
-  selector: 'app-reportes',
+  selector: 'app-lista-estudiantes',
   templateUrl: './listaEstudiantes.component.html',
   styleUrls: ['./listaEstudiantes.component.scss']
 })

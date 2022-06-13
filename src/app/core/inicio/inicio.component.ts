@@ -10,6 +10,8 @@ import { Menu } from 'src/app/shared/interfaces/menu';
 export class InicioComponent implements OnInit {
   menu: Menu[]=[]
   admin: boolean = false;
+  
+  datosUsuario: string;
 
   constructor(private menuService: MenuService) { }
 
@@ -19,6 +21,22 @@ export class InicioComponent implements OnInit {
 
   loadView(){
     this.cargarMenu();
+    this.validaRol();
+  }
+  validaRol(){
+    this.datosUsuario = JSON.stringify(localStorage.getItem('rol'));
+    console.log(this.datosUsuario);
+
+    if(localStorage.getItem('rol') === 'admin')
+    {
+      console.log("ES ADMIN")
+      this.admin=true;
+
+    }
+    else{
+    this.admin=false;
+    console.log("ES USER")
+    }
   }
 
   cargarMenu(): void {

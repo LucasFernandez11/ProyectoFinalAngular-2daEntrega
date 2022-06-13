@@ -1,13 +1,12 @@
-<div class="container bg-div">
-  <span appTwenty class="rol">Bienvenido {{datosUsuario}}!</span>
+<div class="container bg-div"> 
 
-  <h1 appTwenty class="al">Inscripciones</h1>
+  <h1  class="tipografia">Inscripciones</h1>
 
   <div class="example-spacer"></div>
   <span class="example-spacer"></span>
 
-  <button class="agregar" *ngIf="admin" mat-raised-button color="primary" routerLink="/dashboard/crear-inscripcion">+Nueva Inscripcion
-   </button>
+  <button class="agregar" mat-raised-button color="primary" routerLink="/dashboard/crear-inscripcion">+Nueva Inscripcion
+  </button>
 
   <div *ngIf="listaInscripciones.length > 0">
     <mat-form-field class="text-white">
@@ -17,48 +16,49 @@
 
     <div class="mat-elevation-z12 mt-8">
       <table mat-table [dataSource]="dataSource" matSort>
-       
+
         <ng-container matColumnDef="nombre">
           <th mat-header-cell *matHeaderCellDef class="fs-5"> Alumno </th>
           <td mat-cell *matCellDef="let element"> {{element.nombre}} {{element.apellido}} </td>
         </ng-container>
-        
+
         <ng-container matColumnDef="curso">
           <th mat-header-cell *matHeaderCellDef class="fs-5" mat-sort-header> Curso </th>
-          <td mat-cell *matCellDef="let element"  > {{element.curso}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.curso}} </td>
         </ng-container>
-        
+
         <ng-container matColumnDef="dias">
           <th mat-header-cell *matHeaderCellDef class="fs-5" mat-sort-header> Dias </th>
-          <td mat-cell *matCellDef="let element"> {{element.dias}}  </td>
-        </ng-container>        
+          <td mat-cell *matCellDef="let element"> {{element.dias}} </td>
+        </ng-container>
 
-        <ng-container matColumnDef="acciones" class="acciones" width="25%" >
+        <ng-container matColumnDef="acciones" class="acciones" width="25%">
 
-          <th  mat-header-cell *matHeaderCellDef class="fs-5"  style="text-align: right" >
+          <th mat-header-cell *matHeaderCellDef class="fs-5" style="text-align: right">
             Acciones </th>
-          <td mat-cell *matCellDef="let element ; let i = index"  style="text-align: right" >
-            
-            <a *ngIf="!admin" class="pointer mx-2" >
+          <td mat-cell *matCellDef="let element ; let i = index" style="text-align: right">
+
+
+
+            <a class="pointer mx-3" matTooltip="Ver Detalle" (click)="openDialog2(element.id)" style="color: #18b031">
               <mat-icon>search</mat-icon>
             </a>
-
-            <a  *ngIf="admin" class="pointer mx-3" matTooltip="Ver Detalle" (click)="openDialog2(element.id)"  style="color: #18b031">
-              <mat-icon>search</mat-icon>
-              </a>
-              <a *ngIf="admin" class="pointer mx-3" (click)="openDialog(element.id)" matTooltip="Editar Datos" style="color: #1c89c9" >
+            <a *ngIf="admin" class="pointer mx-3" (click)="openDialog(element.id)" matTooltip="Editar Datos"
+              style="color: #1c89c9">
               <mat-icon>edit</mat-icon>
-              </a>
-              <a *ngIf="admin" class="pointer mx-3" (click)="eliminarInscripciones(i)" matTooltip="Eliminar Alumno" style="color: rgb(170, 24, 24)">
+            </a>
+            <a *ngIf="admin" class="pointer mx-3" (click)="eliminarInscripciones(i)" matTooltip="Eliminar Alumno"
+              style="color: rgb(170, 24, 24)">
               <mat-icon>delete</mat-icon>
-              </a>
-          </td> 
+            </a>
+          </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
-      <mat-paginator class="bg-tabla text-white fs-5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+      <mat-paginator class="bg-tabla text-white fs-5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+        aria-label="Select page of periodic elements">
       </mat-paginator>
 
     </div>

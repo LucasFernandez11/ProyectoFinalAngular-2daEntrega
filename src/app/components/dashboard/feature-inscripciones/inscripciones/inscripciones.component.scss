@@ -1,69 +1,64 @@
-
-.al {
+.tipografia {
   font-family: 'Inter';
   text-align: center;
   letter-spacing: 3px;
   border-bottom: 1px solid whitesmoke;
-  // margin: 15px;
-  // padding: 20px;
-  color:whitesmoke ;
-  }
-  .bg-div{
-  
-    background-color:rgba(226, 81, 23, 0.24);
-    border-radius: 30px;
-    box-shadow: 30px 30px 30px  rgba(226, 81, 23, 0.212);
-    
-    }
-    .bg-tabla{
-      background-color:transparent;
-      
-      
-      }
-  
-  table {
-    width: 100%;
-    background-color:transparent;
-   
-  }
-  th, td{
-    width: 20%;
-    color: whitesmoke;
-  }
-  
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-    height: 100%;
-  }
-  
-  button {
-   display: block;
-   margin-bottom: 10px;
-  
-  }
-  
-  .mat-header-cell  {
-    background-color:  rgba(237, 36, 46, 0.51);
-    color: white;
-  }
-  
-  .acciones {
+  color: whitesmoke;
+}
+
+.bg-div {
+  background-color: rgba(226, 81, 23, 0.24);
+  border-radius: 30px;
+  box-shadow: 30px 30px 30px rgba(226, 81, 23, 0.212);
+
+}
+
+.bg-tabla {
+  background-color: transparent;
+}
+
+table {
+  width: 100%;
+  background-color: transparent;
+}
+
+th,
+td {
+  width: 20%;
+  color: whitesmoke;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.mat-header-cell {
+  background-color: rgba(237, 36, 46, 0.51);
+  color: white;
+}
+
+.acciones {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  }
-  
-  .rol {
-    color: whitesmoke;
+}
+
+.rol {
+  color: whitesmoke;
   font-family: 'Inter';
   font-size: 20px;
   font-weight: bolder;
   margin-left: 40px;
-  }
-  
-  .agregar {
+}
+
+.agregar {
   margin-left: 85%;
   padding: 10px;
-  }
-  
+}

@@ -1,9 +1,12 @@
-<div class="position-relative overflow-hidden mt-0 p-md-5 m-md-3 text-center bg-light">
-  <div class="col-md-5 p-lg-5 mx-auto my-5">
-    <h1 class="display-4 fw-normal">Student App</h1>
-    <p class="lead fw-normal">Aplicacion para la gestion de estudiantes y cursos</p>
-   
-  </div>
-  <div class="product-device shadow-sm d-none d-md-block"></div>
-  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+<div class="container bg-div">
+  <mat-toolbar class="toolbar-container">
+    <h1 appTwenty class="text-white tipografia">Aplicacion para la administracion de estudiantes</h1>
+     
+  </mat-toolbar>
+  <mat-toolbar *ngIf="admin" class="toolbar-container">    
+      <p appTwenty class="text-white tipografia">Has iniciado sesion como {{datosUsuario}}, puede crear, editar y elimiar Estudiantes, Cursos, como asi tambien realizar y eliminar inscripciones  </p>
+  </mat-toolbar>
+  <mat-toolbar *ngIf="!admin" class="toolbar-container">    
+      <p appTwenty class="text-white tipografia">Has iniciado sesion como {{datosUsuario}}, puede ver todos los detalles de nuestros cursos y nuestros alumnos.<br> Si te interesa un curso podras inscribirte en la pestaña de Inscripciones  </p>
+  </mat-toolbar>
 </div>

@@ -1,10 +1,9 @@
 <div class=" body d-flex align-items-center justify-content-center h-100">
   <mat-spinner *ngIf="loading" diameter="50" class="spinner"></mat-spinner>
     <div class="login">
-
         <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
           <h1 color="primary" class="tit" appTwenty>Sign up </h1>
-            <img src="/assets/img/usuario.png" alt="">
+            <img src="https://login.gov/assets/img/login-gov-600x314.png" alt="">
             <mat-form-field appearance="fill">
               <mat-label>Usuario:</mat-label>
               <input matInput type="text" formControlName="usuario">

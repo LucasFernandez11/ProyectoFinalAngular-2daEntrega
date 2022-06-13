@@ -6,7 +6,7 @@ import { Directive, ElementRef } from '@angular/core';
 export class TwentyDirective {
 
   constructor(private elRef: ElementRef) {
-    elRef.nativeElement.style.fontSize='20';
+    elRef.nativeElement.style.fontSize='20px';
   }
 
 

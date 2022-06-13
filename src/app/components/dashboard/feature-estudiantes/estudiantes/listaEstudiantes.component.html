@@ -1,7 +1,6 @@
-<div class="container  bg-div">
-  
-  <span appTwenty class="rol">Has ingresado como {{datosUsuario}}</span>
-  <h1 appTwenty class="al">Estudiantes</h1>
+<div class="container  bg-div">  
+ 
+  <h1 class="tipografia">Estudiantes</h1>
 
   <button class="agregar" *ngIf="admin" mat-raised-button color="primary" routerLink="/dashboard/crear-estudiante">+Agregar
     Estudiante</button>
@@ -40,11 +39,7 @@
             Acciones </th>
           <td mat-cell *matCellDef="let element ; let i = index" style="text-align: right">
 
-            <a *ngIf="!admin" class="pointer mx-2">
-              <mat-icon>search</mat-icon>
-            </a>
-
-            <a *ngIf="admin" class="pointer mx-3" matTooltip="Ver Detalle" (click)="openDialog2(element.id)" style="color: #18b031">
+            <a  class="pointer mx-3" matTooltip="Ver Detalle" (click)="openDialog2(element.id)" style="color: #18b031">
               <mat-icon>search</mat-icon>
             </a>
             <a *ngIf="admin" class="pointer mx-3" (click)="openDialog(element.id)" matTooltip="Editar Datos"

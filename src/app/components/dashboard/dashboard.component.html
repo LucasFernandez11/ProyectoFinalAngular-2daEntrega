@@ -5,13 +5,12 @@
   <mat-sidenav-container class="altura contenedor" >
     <mat-sidenav class="bg-barra sidenav" mode="side" [(opened)]="opened">
       <div class="side">
-        <a class="menu" mat-button *ngFor="let item of menu" [routerLink]="item.redirect">
+        <a class="menu tipografia" appTwenty mat-button *ngFor="let item of menu" [routerLink]="item.redirect">
           {{item.nombre}}</a>
       </div>
     </mat-sidenav>
     <mat-sidenav-content>
-      <button class="btn btn-secondary" (click)="opened=!opened">
-        <mat-icon>menu</mat-icon>
+      <button mat-mini-fab class="boton" (click)="opened=!opened"> <mat-icon>more_vert</mat-icon>
       </button>
       <router-outlet></router-outlet>
     </mat-sidenav-content>

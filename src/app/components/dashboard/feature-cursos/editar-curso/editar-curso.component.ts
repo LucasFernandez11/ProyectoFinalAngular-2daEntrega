@@ -45,7 +45,7 @@ export class EditarCursoComponent implements OnInit {
     const formCursos: Cursos={
       id: this.data.id,
       cursoNombre: this.form.value.cursoNombre,
-      cursoDias: this.data.cursoDias,
+      cursoDias: this.form.value.cursoDias,
       precio: this.form.value.precio,
       profesor: this.form.value.profesor,
       detalle: this.form.value.detalle,

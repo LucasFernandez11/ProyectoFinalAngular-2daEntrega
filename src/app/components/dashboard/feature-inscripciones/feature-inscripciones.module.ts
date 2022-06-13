@@ -18,9 +18,7 @@ import { RouterModule } from '@angular/router';
     MaterialModule,
     RouterModule
   ],
-  exports: [ 
-    
-    
+  exports: [   
     MaterialModule,
     RouterModule
   ]
