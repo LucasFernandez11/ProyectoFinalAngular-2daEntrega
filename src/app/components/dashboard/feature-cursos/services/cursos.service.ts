@@ -8,8 +8,8 @@ export class CursosService {
 
   ListaCursos: Cursos[] = [
     {id: 1, cursoNombre: "React.Js", cursoDias:"lunes y miercoles", precio: 230000, profesor: "Antonio Gallego", detalle:"Curso de react"},
-    {id: 1, cursoNombre: "Angular", cursoDias:"martes y jueves", precio: 230000, profesor: "Marcelo Tinelli", detalle:"Curso de angular"},
-    {id: 1, cursoNombre: "Vue.Js", cursoDias:"sabados", precio: 230000, profesor: "Ricardo Fort", detalle:"Curso de Vue"},
+    {id: 2, cursoNombre: "Angular", cursoDias:"martes y jueves", precio: 230000, profesor: "Marcelo Tinelli", detalle:"Curso de angular"},
+    {id: 3, cursoNombre: "Vue.Js", cursoDias:"sabados", precio: 230000, profesor: "Ricardo Fort", detalle:"Curso de Vue"},
   ];
   constructor() { }
 
