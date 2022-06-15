@@ -22,7 +22,7 @@ export class InscripcionesComponent implements OnInit {
 
   datosUsuario: string;
 
-  listaInscripciones: Inscripciones[] = [];
+    listaInscripciones: Inscripciones[] = [];
 
   admin: boolean = false;
   

@@ -14,6 +14,7 @@ import { MaterialModule } from 'src/app/components/material/material.module';
   templateUrl: './editar-curso.component.html',
   styleUrls: ['./editar-curso.component.scss']
 })
+
 export class EditarCursoComponent implements OnInit {
   cursos:any[]= ['react', 'angular', 'vue', 'react y angular', 'react y vue', 'angular y vue'];
   dias: any[] = ['lunes y miercoles', 'martes y jueves', 'sabado', 'miercoles y viernes'];

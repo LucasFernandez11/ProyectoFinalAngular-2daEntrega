@@ -1,10 +1,14 @@
-<div class="container bg-div">
-  <mat-toolbar class="toolbar-container">
+<div class="container bg-div  ">
+  <mat-toolbar class="toolbar-container d-flex flex-column">
     <h1 appTwenty class="text-white tipografia">Aplicacion para la administracion de estudiantes</h1>
      
   </mat-toolbar>
-  <mat-toolbar *ngIf="admin" class="toolbar-container">    
+  <mat-toolbar *ngIf="admin" class="toolbar-container d-flex flex-column mb-5">    
       <p appTwenty class="text-white tipografia">Has iniciado sesion como {{datosUsuario}}, puede crear, editar y elimiar Estudiantes, Cursos, como asi tambien realizar y eliminar inscripciones  </p>
+      <div class="mt-5 pt-5">
+        <img src="https://c.tenor.com/kWejy2kDcTwAAAAC/office.gif" alt="">
+
+      </div>
   </mat-toolbar>
   <mat-toolbar *ngIf="!admin" class="toolbar-container">    
       <p appTwenty class="text-white tipografia">Has iniciado sesion como {{datosUsuario}}, puede ver todos los detalles de nuestros cursos y nuestros alumnos.<br> Si te interesa un curso podras inscribirte en la pestaña de Inscripciones  </p>

@@ -25,6 +25,7 @@ export class CrearCursoComponent implements OnInit {
                  this.value = navigation?.extras?.state;
 
             this.form = this.fb.group({
+              id:[this._cursosService.maxId(this._cursosService.getCursos())+1],
               cursoNombre:  ["",  [Validators.required, Validators.maxLength(40), ]],
               cursoDias:  ["",  [Validators.required]],
               precio: ["",  [Validators.required]],
@@ -61,7 +62,7 @@ export class CrearCursoComponent implements OnInit {
   }
   volver(){
     this.router.navigate(['/dashboard/cursos']);
-    console.log(this.form.value);
+  
   }
 
 }

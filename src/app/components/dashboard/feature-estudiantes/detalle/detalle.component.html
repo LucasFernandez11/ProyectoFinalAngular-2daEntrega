@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h1 appTwenty>Detalles del alumno</h1>
+  <h1 appTwenty class="al">Detalles del alumno</h1>
   <mat-card class="mt-4">
     <div class="card" role="list">
       <h5 class="card-header" role="listitem">{{form.value.estudiante}}</h5>
@@ -11,6 +11,15 @@
         </p>
         <p>
           <mat-list-item role="listitem">Tel: {{form.value.telefono}} </mat-list-item>
+        </p>
+
+        
+        <p>
+          <mat-list-item role="listitem">Cursos:
+            <tr *ngFor="let curso of curso1; let i = index">
+              <td>{{curso.cursoNombre}}</td>
+            </tr>
+          </mat-list-item>
         </p>
         <a (click)="cerrar()" class="btn btn-primary">Cerrar</a>
       </div>
